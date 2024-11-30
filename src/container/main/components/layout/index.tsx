@@ -5,9 +5,9 @@ import Header from './header';
 const Layout = (): React.ReactElement => {
     return (
         <>
-            <Header/>
+            <Header />
             <main>
-                <Outlet/>
+                <Outlet />
             </main>
         </>
     );
