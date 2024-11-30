@@ -1,7 +1,8 @@
 import React from 'react';
+import Main from './container/main';
 
 const App = () => {
-    return <h1>Hello world для проекта - sber_web</h1>;
+    return <Main />;
 };
 
 export default App;

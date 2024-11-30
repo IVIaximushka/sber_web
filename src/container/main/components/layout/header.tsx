@@ -5,11 +5,16 @@ import { getNavigationsValue } from '@brojs/cli';
 const navigations: Array<{ name: string; href: string }> = [
     {
         name: 'Главная',
-        href: getNavigationsValue('kfu-24-teacher.main')
+        href: getNavigationsValue('sber_web.main')
     },
     {
         name: 'Детальная информация',
-        href: getNavigationsValue('kfu-24-teacher.detail')
+        href: getNavigationsValue('sber_web.detail')
+    },
+
+    {
+        name: 'Редактировать',
+        href: getNavigationsValue('sber_web.edit')
     }
 ];
 
