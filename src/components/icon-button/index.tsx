@@ -1,12 +1,12 @@
 import React from 'react';
 import { IcButtonStyled, IcLinkStyled } from './index.style';
-import logo from '../../static/images/logo.png';
+import Icon from '../icon';
 
 const IcButton = ({ href = '' }) => {
     return (
         <IcButtonStyled size="large" edge="start" color="inherit" aria-label="menu">
             <IcLinkStyled to={href}>
-                <img src={logo} alt={'Логотип'} width={50} />
+                <Icon />
             </IcLinkStyled>
         </IcButtonStyled>
     );
