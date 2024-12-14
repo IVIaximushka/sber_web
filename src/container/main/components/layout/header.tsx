@@ -1,6 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { getNavigationsValue } from '@brojs/cli';
+import { Box, Typography, Toolbar } from '@mui/material';
+import RefButton from '../../../../components/ref-button';
+import IcButton from '../../../../components/icon-button';
+import { HeaderStyled } from './index.style';
 
 const navigations: Array<{ name: string; href: string }> = [
     {
@@ -20,17 +23,19 @@ const navigations: Array<{ name: string; href: string }> = [
 
 const Header = (): React.ReactElement => {
     return (
-        <header>
-            <ul>
-                {navigations.map((item) => {
-                    return (
-                        <li key={item.name}>
-                            <Link to={item.href}>{item.name}</Link>
-                        </li>
-                    );
-                })}
-            </ul>
-        </header>
+        <HeaderStyled position="static">
+            <Toolbar>
+                <IcButton href={getNavigationsValue('sber_web.main')} />
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    Что? Где? Когда?
+                </Typography>
+                <Box>
+                    {navigations.map((item) => (
+                        <RefButton key={item.name} name={item.name} href={item.href} />
+                    ))}
+                </Box>
+            </Toolbar>
+        </HeaderStyled>
     );
 };
 

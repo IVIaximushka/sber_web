@@ -26,7 +26,9 @@ export default [
       'react-hooks': hooksPlugin
     },
     rules: {
-      ...hooksPlugin.configs.recommended.rules
+      ...hooksPlugin.configs.recommended.rules,
+      "prettier/prettier": "error",
+      "react/prop-types": 0
     }
   },
   pluginPrettier
