@@ -1,12 +1,6 @@
 import styled from '@emotion/styled';
 import { CardContent } from '@mui/material';
 
-export const ItemStyled = styled.div`
-    color: #f19502;
-    background-color: rgb(0 0 0 / 87%);
-`;
-
-
 export const CardContentStyled = styled(CardContent)<{ contentHeight: number }>`
     position: relative;
     max-height: 600px;
