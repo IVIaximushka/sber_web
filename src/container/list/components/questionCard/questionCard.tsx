@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { CardContentStyled } from './cardContent.style';
-import { QuestionPic } from './questionPic';
 import { CardStyled } from './questionCard.style';
 import { CardHeaderStyled } from './cardHeader.style';
+import QuestionPic from './questionPic';
 
-export default function QuestionCard({ cardHeight, cardNum }) {
+const QuestionCard = ({ cardHeight, cardNum }) => {
     const [isHovered, setIsHovered] = useState(false);
     const cardTitle = 'Вопрос ' + String(cardNum);
 
@@ -23,4 +23,6 @@ export default function QuestionCard({ cardHeight, cardNum }) {
             </CardContentStyled>
         </CardStyled>
     );
-}
+};
+
+export default QuestionCard;
