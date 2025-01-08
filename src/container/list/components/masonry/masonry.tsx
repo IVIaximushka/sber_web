@@ -5,7 +5,7 @@ import { MasonryStyled } from './masonry.style';
 
 const heights = [400, 500, 600, 400, 400];
 
-export default function CardsMasonry() {
+const CardsMasonry = () => {
     return (
         <MasonryBoxStyled>
             <MasonryStyled columns={2} spacing={2}>
@@ -15,4 +15,6 @@ export default function CardsMasonry() {
             </MasonryStyled>
         </MasonryBoxStyled>
     );
-}
+};
+
+export default CardsMasonry;
