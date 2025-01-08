@@ -1,8 +1,8 @@
 import React from 'react';
 import { getNavigationsValue } from '@brojs/cli';
 import { Box, Typography, Toolbar } from '@mui/material';
-import RefButton from '../../../../components/ref-button';
-import IcButton from '../../../../components/icon-button';
+import RefButton from '../../../components/ref-button';
+import IcButton from '../../../components/icon-button';
 import { HeaderStyled } from './index.style';
 
 const navigations: Array<{ name: string; href: string }> = [
