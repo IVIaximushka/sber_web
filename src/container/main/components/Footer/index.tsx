@@ -1,7 +1,7 @@
 import React from 'react';
 import { getNavigationsValue } from '@brojs/cli';
 import { Typography, Toolbar } from '@mui/material';
-import IcButton from '../../../components/icon-button';
+import IcButton from '../../../../components/icon-button';
 import { FooterStyled } from './index.style';
 
 const Footer = (): React.ReactElement => {
