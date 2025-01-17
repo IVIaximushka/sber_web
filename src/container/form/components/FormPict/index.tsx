@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormPictStyled } from './FormPictStyled';
+import { FormPictStyled } from './index.styled';
 
 const FormPict = () => {
     return (

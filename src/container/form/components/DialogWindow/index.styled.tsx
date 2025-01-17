@@ -7,12 +7,11 @@ export const DialogDiv = styled(Dialog)`
         color: black; // Цвет текста
     };
     background-color: rgba(0, 0, 0, 0.5);
-    .
 `;
 
 export const DialogButton = styled(Button)`
     color: #f19502;
     &:hover {
-        background-color:rgba(241, 149, 2, 0.25); 
-  }
+        background-color: rgba(241, 149, 2, 0.25);
+    }
 `;

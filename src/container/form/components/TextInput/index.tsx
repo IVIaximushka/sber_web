@@ -1,7 +1,7 @@
 import React from 'react';
-import { TextInputStyled } from './TextInputStyled';
+import { TextInputStyled } from './index.styled';
 
-const TextInput = ({ placeholder, row, required=false, register, ...props}): React.ReactElement => {
+const TextInput = ({ placeholder, row, required = false, register, ...props }): React.ReactElement => {
     const updatePlaceholder = required ? `${placeholder} *` : placeholder;
 
     return (
