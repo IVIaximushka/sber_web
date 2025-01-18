@@ -13,7 +13,7 @@
     "license": "ISC",
     "description": "",
     "dependencies": {
-        "@brojs/cli": "^1.0.0",
+        "@brojs/cli": "^1.8.4",
         "@emotion/react": "^11.13.5",
         "@emotion/styled": "^11.13.5",
         "@mui/lab": "^6.0.0-beta.19",
