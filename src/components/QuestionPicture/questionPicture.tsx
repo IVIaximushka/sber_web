@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const QuestionPic = () => {
+const QuestionPicture = () => {
     return (
         <img
             src={`${__webpack_public_path__}/remote-assets/images/meme.jpg`}
@@ -11,4 +11,4 @@ const QuestionPic = () => {
     );
 };
 
-export default QuestionPic;
+export default QuestionPicture;

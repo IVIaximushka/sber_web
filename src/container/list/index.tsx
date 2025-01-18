@@ -1,8 +1,8 @@
 import React from 'react';
-import CardsMasonry from './components/masonry/masonry';
+import QuestionList from "./components/QuestionList";
 
 const ListPage = (): React.ReactElement => {
-    return <CardsMasonry />;
+    return <QuestionList/>;
 };
 
 export default ListPage;
