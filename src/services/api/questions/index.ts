@@ -3,10 +3,8 @@ import { GetListResponse } from './types';
 
 class ListService {
     async getList(page = 1, number = 30): Promise<GetListResponse> {
-        console.log({page, number});
         const res = await network.get(`/questions?page=${page}&itemsPerPage=${number}`);
-        console.log(res.data["hydra:member"]);
-        return res.data["hydra:member"];
+        return res.data['hydra:member'];
     }
 }
 

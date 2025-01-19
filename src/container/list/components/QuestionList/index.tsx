@@ -1,5 +1,5 @@
 import QuestionCard from '../QuestionCard';
-import React, { useState } from 'react';
+import React from 'react';
 import { QuestionListStyled } from './index.style';
 import { useGetListQuery } from '../../../../store/api';
 
