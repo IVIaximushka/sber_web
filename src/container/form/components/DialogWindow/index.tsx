@@ -3,7 +3,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { DialogDiv, DialogButton } from './index.styled';
+import { DialogDiv } from './index.style';
+import { Button } from '@mui/material';
 
 const DialogWindow = ({ open, onClose }): React.ReactElement => {
     return (
@@ -16,7 +17,9 @@ const DialogWindow = ({ open, onClose }): React.ReactElement => {
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <DialogButton onClick={onClose}>Закрыть</DialogButton>
+                <Button onClick={onClose} color="warning" variant="outlined">
+                    Закрыть
+                </Button>
             </DialogActions>
         </DialogDiv>
     );

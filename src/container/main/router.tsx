@@ -2,7 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import ListPage from '../list';
 import DetailPage from '../detail';
-import FormPage from '../form/FormPage';
+import FormPage from '../form';
 import { getNavigationsValue } from '@brojs/cli';
 import Layout from './components/layout';
 

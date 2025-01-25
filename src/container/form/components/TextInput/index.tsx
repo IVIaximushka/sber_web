@@ -1,19 +1,41 @@
 import React from 'react';
-import { TextInputStyled } from './index.styled';
+import { TextField } from '@mui/material';
 
-const TextInput = ({ placeholder, row, required = false, register, ...props }): React.ReactElement => {
-    const updatePlaceholder = required ? `${placeholder} *` : placeholder;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const TextInput = ({ name, label, required = true, errors = {}, register, ...props }) => {
+    const isMultiline = ['question', 'answer', 'comment'].includes(name);
+    const type = ['email'].includes(name) ? 'email' : 'string';
+
+    let validationRules = {};
+    if (name === 'email') {
+        validationRules = {
+            pattern: {
+                value: emailRegex,
+                message: 'Адрес электронной почты должен иметь вид: user@domain.com'
+            }
+        };
+    }
+
+    const hasError = !!errors[name];
 
     return (
-        <TextInputStyled
+        <TextField
             required={required}
-            placeholder={updatePlaceholder}
-            multiline
-            rows={row}
-            {...register(props.name)}
+            label={label}
+            id="outlined-multiline"
+            margin="dense"
+            fullWidth
+            name={name}
+            color="warning"
+            multiline={isMultiline}
+            rows={2}
+            type={type}
+            error={hasError}
+            helperText={hasError && errors[name]?.message}
+            {...register(name, validationRules)}
             {...props}
         />
     );
 };
-
 export default TextInput;
