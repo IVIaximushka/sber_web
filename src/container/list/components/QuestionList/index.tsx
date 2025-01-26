@@ -2,6 +2,7 @@ import QuestionCard from '../QuestionCard';
 import React from 'react';
 import { QuestionListStyled } from './index.style';
 import { useGetListQuery } from '../../../../store/api';
+import {validateText} from './questionTextValidation';
 
 const heights = [400, 500, 600, 400, 400];
 
@@ -15,7 +16,7 @@ const QuestionList = () => {
 
                 {data?.map((item, index) => (
                     <QuestionCard cardNum={index + 1}>
-                        {item.question} - {item.answer}
+                        {validateText(item.question)} - {item.answer}
                     </QuestionCard>
 
                 ))}
