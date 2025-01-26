@@ -5,7 +5,7 @@ const QuestionPicture = () => {
         <img
             src={`${__webpack_public_path__}/remote-assets/images/meme.jpg`}
             alt={'Фото вопроса'}
-            width={334}
+            width={340}
             height={200}
         />
     );

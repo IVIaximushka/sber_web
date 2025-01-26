@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { CardContent } from '@mui/material';
 
-export const CardContentStyled = styled(CardContent)<{ contentHeight: number }>`
+export const CardContentStyled = styled(CardContent)`
     position: relative;
     max-height: 600px;
     height: 100%;
@@ -15,7 +15,7 @@ export const CardContentStyled = styled(CardContent)<{ contentHeight: number }>`
 
     &.expanded {
         white-space: normal;
-        height: ${({ contentHeight = 0 }) => contentHeight}px;
+        height: 400px;
         z-index: 10;
         position: absolute;
         top: 0;
