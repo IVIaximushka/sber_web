@@ -8,9 +8,6 @@ export const CardContentStyled = styled(CardContent)`
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
     color: orange;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     transition: all 0.6s ease;
 
     &.expanded {

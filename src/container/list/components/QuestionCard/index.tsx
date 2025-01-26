@@ -5,18 +5,13 @@ import QuestionPicture from '../../../../components/QuestionPicture/questionPict
 import CardHeader from './CardHeader';
 import CardContent from './CardContent';
 
-const QuestionCard = ({cardNum, children}) => {
+const QuestionCard = ({ fullText, children }) => {
     const [isHovered, setIsHovered] = useState(false);
-    const cardTitle = 'Вопрос ' + String(cardNum);
 
     return (
-        <CardStyled
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            <CardHeader cardTitle={cardTitle} />
+        <CardStyled elevation={10} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             <QuestionPicture />
-            <CardContent className={isHovered ? 'expanded' : ''}>{children}</CardContent>
+            <CardContent className={isHovered ? 'expanded' : ''}>{isHovered ? fullText : children}</CardContent>
         </CardStyled>
     );
 };
