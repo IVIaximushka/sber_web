@@ -1,11 +1,9 @@
 import styled from '@emotion/styled';
 import Card from '@mui/material/Card';
 
-export const CardStyled = styled(Card)<{ cardHeight: number }>`
+export const CardStyled = styled(Card)`
     position: relative;
-    max-width: 345px;
-    height: ${({ cardHeight = 0 }) => cardHeight}px;
-    color: #ffc073;
-    background-color: rgba(30, 15, 44, 0.96);
+    height: 400px;
+    background-color: black;
     border-radius: 30px;
 `;

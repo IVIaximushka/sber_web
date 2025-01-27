@@ -20,5 +20,6 @@ module.exports = {
   },
   config: {
     "sber_web.api": "/api",
+    "sber_web.questions_api": "http://www.db.chgk.info",
   },
 };
