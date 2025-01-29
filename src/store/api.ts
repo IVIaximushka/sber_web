@@ -30,4 +30,4 @@ export const api = createApi({
     })
 });
 
-export const { useGetListQuery } = api;
+export const { useGetListQuery, useGetQuestionQuery } = api;
