@@ -6,7 +6,7 @@ import { validateText } from './questionTextValidation';
 import { truncateText } from './questionTextTruncation';
 
 const QuestionList = () => {
-    const { data, isLoading, error } = useGetListQuery({});
+    const { data, isLoading, error } = useGetListQuery(undefined);
     return (
         <>
             {isLoading && <div>Loading...</div>}

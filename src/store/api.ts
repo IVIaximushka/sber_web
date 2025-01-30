@@ -19,9 +19,9 @@ export const api = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({ baseUrl: '' }),
     endpoints: (builder) => ({
-        getList: builder.query<GetListResponse, { page?: number; number?: number }>({
-            queryFn: createQueryFromPromise(({ page = 1, number = 15 }: { page?: number; number?: number }) =>
-                listService.getList(page, number)
+        getList: builder.query<GetListResponse, number>({
+            queryFn: createQueryFromPromise((page: number) =>
+                listService.getList(page)
             )
         })
     })
