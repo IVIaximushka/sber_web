@@ -5,7 +5,7 @@ import DetailPage from '../detail';
 import FormPage from '../form';
 import { getNavigationValue } from '@brojs/cli';
 import Layout from './components';
-import NotFoundPage from './components/NotFoundPage';
+import NotFoundPage from '../notFound';
 
 export const router = createBrowserRouter([
     {
