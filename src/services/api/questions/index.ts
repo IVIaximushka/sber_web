@@ -3,7 +3,7 @@ import { GetListResponse, Question } from './types';
 
 class QuestionService {
     async getQuestion(id: string): Promise<Question> {
-        const res = await network.get(`/questions/${id}`);
+        const res = await network.get(`/question/${id}`);
         return res.data;
     }
 }

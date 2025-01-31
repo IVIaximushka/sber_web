@@ -25,7 +25,9 @@ export const api = createApi({
             )
         }),
         getQuestion: builder.query<Question, string>({
-            queryFn: createQueryFromPromise((id: string) => questionService.getQuestion(id))
+            queryFn: createQueryFromPromise((id: string) =>
+                questionService.getQuestion(id)
+            )
         })
     })
 });

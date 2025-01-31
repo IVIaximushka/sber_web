@@ -16,7 +16,6 @@ const FormPage = (): React.ReactElement => {
     const [dialogOpen, setDialogOpen] = useState(false);
 
     const onSubmit = (data) => {
-        console.log(data);
         reset();
         setDialogOpen(true);
     };
