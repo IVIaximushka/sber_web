@@ -8,7 +8,7 @@ import { getNavigationValue } from '@brojs/cli';
 import { LinkStyled } from './LinkStyled/index.style';
 
 const QuestionList = () => {
-    const { data, isLoading, error } = useGetListQuery({});
+    const { data, isLoading, error } = useGetListQuery(undefined);
     return (
         <>
             {isLoading && <div>Loading...</div>}

@@ -3,14 +3,14 @@ import { GetListResponse, Question } from './types';
 
 class QuestionService {
     async getQuestion(id: string): Promise<Question> {
-        const res = await network.get(`/questions/${id}`);
+        const res = await network.get(`/question/${id}`);
         return res.data;
     }
 }
 
 class ListService {
-    async getList(page = 1, number = 30): Promise<GetListResponse> {
-        const res = await network.get(`/questions?page=${page}&itemsPerPage=${number}`);
+    async getList(page = 1): Promise<GetListResponse> {
+        const res = await network.get(`/questions/${page}`);
         return res.data['hydra:member'];
     }
 }
