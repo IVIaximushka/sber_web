@@ -1,9 +1,9 @@
 import React from 'react';
 import { CardContentStyled } from './index.style';
-import { useGetListQuery } from '../../../../../store/api';
+import CardContentHover from "./OnHover";
 
 const CardContent = ({ className, children }): React.ReactElement => {
-    return <CardContentStyled className={className}>{children}</CardContentStyled>;
+    return <CardContentStyled className={className}>{className=='expanded' ? <CardContentHover fullText={children} /> : children}</CardContentStyled>;
 };
 
 export default CardContent;

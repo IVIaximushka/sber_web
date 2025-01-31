@@ -19,7 +19,6 @@ export const CardContentStyled = styled(CardContent)`
         background-color: black;
         color: orange;
         left: 0;
-        opacity: 0.85;
         right: 0;
     }
 `;
