@@ -3,14 +3,12 @@ import { LoadingIconStyled } from './index.styled';
 import { Circular } from './Circular/index.styled';
 import LoadingPict from './LoadingPict';
 
-const LoadingIcon = ({ loading }) => {
+const LoadingIcon = () => {
     return (
-        loading && (
-            <LoadingIconStyled>
-                <Circular size={'9.5rem'} />
-                <LoadingPict />
-            </LoadingIconStyled>
-        )
+        <LoadingIconStyled>
+            <Circular size={'9.5rem'} />
+            <LoadingPict />
+        </LoadingIconStyled>
     );
 };
 
