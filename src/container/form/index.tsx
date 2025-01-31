@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { FormPageStyled } from './index.style';
 import TextInput from './components/TextInput';
 import DialogWindow from './components/DialogWindow';
-import { ButtonStyled } from './components/ButtonStyled/index.style';
+import { ButtonStyled } from '../../components/ButtonStyled/index.style';
 
 const FormPage = (): React.ReactElement => {
     const {
@@ -32,7 +32,7 @@ const FormPage = (): React.ReactElement => {
                     <TextInput label="ФИО" name="fullname" register={register} />
                     <TextInput label="Адрес электронной почты" name="email" errors={errors} register={register} />
                     <TextInput label="Дополнительная информация" name="addit" required={false} register={register} />
-                    <ButtonStyled type="submit" color="warning" variant="contained">
+                    <ButtonStyled type="submit" variant="outlined">
                         Отправить вопрос
                     </ButtonStyled>
                 </form>

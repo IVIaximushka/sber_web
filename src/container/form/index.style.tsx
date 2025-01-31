@@ -5,7 +5,7 @@ export const FormPageStyled = styled.div`
     z-index: 1;
     background: linear-gradient(
         to top,
-        rgba(230, 186, 147, 0.73),
+        rgba(198, 198, 198, 0.82),
         rgba(228, 228, 228, 0.93),
         rgba(246, 245, 243, 0.92)
     );
