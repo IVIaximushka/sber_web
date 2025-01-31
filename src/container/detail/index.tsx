@@ -5,6 +5,7 @@ import { DetailPageStyled } from './index.style';
 import AnswerSlide from './AnswerSlide';
 import AnswerPicture from './AnswerPicture';
 import { getNavigationValue } from '@brojs/cli';
+import Loading from '../../components/Loading';
 
 const DetailPage = (): React.ReactElement => {
     const { id } = useParams();
@@ -13,7 +14,7 @@ const DetailPage = (): React.ReactElement => {
     return (
         <DetailPageStyled>
             {isLoading ? (
-                <div>Loading...</div>
+                <Loading />
             ) : data ? (
                 <>
                     <h2>Страница детальных данных</h2>
@@ -26,7 +27,7 @@ const DetailPage = (): React.ReactElement => {
                         Чтобы увидеть дополнительную информацию по какому-либо вопросу, нужно выбрать карточку.
                         Перейдите на <a href={getNavigationValue('sber_web.main')}>главную.</a>
                     </h3>
-                    <AnswerPicture name={'loading_owl'} />
+                    <AnswerPicture name={'druz-cto-gde-kogda'} />
                 </>
             )}
         </DetailPageStyled>
