@@ -1,4 +1,4 @@
-export interface ListItem {
+export interface Question {
     id: string;
     tour: string;
     number: number;
@@ -11,4 +11,4 @@ export interface ListItem {
     comments: string;
 }
 
-export type GetListResponse = Array<ListItem>;
+export type GetListResponse = Array<Question>;

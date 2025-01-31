@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery, QueryReturnValue } from '@reduxjs/toolkit/query/react';
-import { GetListResponse } from '../services/api/questions/types';
-import { listService } from '../services/api/questions';
+import { GetListResponse, Question } from '../services/api/questions/types';
+import { listService, questionService } from '../services/api/questions';
 
 const createQueryFromPromise =
     <ARGS, RES>(fn: (...args: Array<ARGS>) => Promise<RES>) =>
@@ -23,8 +23,11 @@ export const api = createApi({
             queryFn: createQueryFromPromise(({ page = 1, number = 15 }: { page?: number; number?: number }) =>
                 listService.getList(page, number)
             )
+        }),
+        getQuestion: builder.query<Question, string>({
+            queryFn: createQueryFromPromise((id: string) => questionService.getQuestion(id))
         })
     })
 });
 
-export const { useGetListQuery } = api;
+export const { useGetListQuery, useGetQuestionQuery } = api;

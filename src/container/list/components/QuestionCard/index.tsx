@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useState } from 'react';
 import { CardStyled } from './index.style';
 import QuestionPicture from '../../../../components/QuestionPicture/questionPicture';
-import CardHeader from './CardHeader';
 import CardContent from './CardContent';
 
 const QuestionCard = ({ fullText, children }) => {
