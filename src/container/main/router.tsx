@@ -5,6 +5,7 @@ import DetailPage from '../detail';
 import FormPage from '../form';
 import { getNavigationValue } from '@brojs/cli';
 import Layout from './components';
+import NotFoundPage from '../notFound';
 
 export const router = createBrowserRouter([
     {
@@ -24,5 +25,9 @@ export const router = createBrowserRouter([
                 element: <FormPage />
             }
         ]
+    },
+    {
+        path: '*',
+        element: <NotFoundPage />
     }
 ]);
