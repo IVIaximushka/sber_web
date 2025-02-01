@@ -10,7 +10,7 @@ const QuestionCard = ({ fullText, children }) => {
 
     return (
         <CardStyled elevation={10} cardHeight={getHeight(fullText)} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-            <QuestionPicture />
+            <QuestionPicture questionText={fullText} />
             <CardContent className={isHovered ? 'expanded' : ''}>{isHovered ? fullText : children}</CardContent>
         </CardStyled>
     );
