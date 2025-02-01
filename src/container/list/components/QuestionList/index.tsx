@@ -6,22 +6,25 @@ import { validateText } from './questionTextValidation';
 import { truncateText } from './questionTextTruncation';
 import { getNavigationValue } from '@brojs/cli';
 import { LinkStyled } from './LinkStyled/index.style';
+import Loading from '../../../../components/Loading';
 
 const QuestionList = () => {
     const { data, isLoading, error } = useGetListQuery(undefined);
     return (
         <>
-            {isLoading && <div>Loading...</div>}
+            {isLoading && <Loading />}
             {error && <div>Произошла ошибка</div>}
-            <QuestionListStyled columns={3} spacing={2}>
-                {data?.map((item) => (
-                    <LinkStyled to={getNavigationValue("sber_web.detail").replace(":id", item.id)}>
-                        <QuestionCard fullText={validateText(item.question)}>
-                            {truncateText(validateText(item.question))}
-                        </QuestionCard>
-                    </LinkStyled>
-                ))}
-            </QuestionListStyled>
+            {data &&
+                <QuestionListStyled columns={3} spacing={2}>
+                    {data?.map((item) => (
+                        <LinkStyled to={getNavigationValue("sber_web.detail").replace(":id", item.id)}>
+                            <QuestionCard fullText={validateText(item.question)}>
+                                {truncateText(validateText(item.question))}
+                            </QuestionCard>
+                        </LinkStyled>
+                    ))}
+                </QuestionListStyled>
+            }
         </>
     );
 };
