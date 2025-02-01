@@ -6,6 +6,7 @@ import DialogWindow from './components/DialogWindow';
 import { ButtonStyled } from '../../components/ButtonStyled/index.style';
 
 const FormPage = (): React.ReactElement => {
+    document.documentElement.scrollTop = 0;
     const {
         handleSubmit,
         reset,

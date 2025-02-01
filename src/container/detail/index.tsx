@@ -9,6 +9,7 @@ import Loading from '../../components/Loading';
 import { validateText } from '../../services/validation/questions/questionTextValidation';
 
 const DetailPage = (): React.ReactElement => {
+    document.documentElement.scrollTop = 0;
     const { id } = useParams();
     const { data, isLoading } = useGetQuestionQuery(id);
 
