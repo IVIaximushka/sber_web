@@ -6,6 +6,7 @@ import DialogWindow from './components/DialogWindow';
 import { ButtonStyled } from '../../components/ButtonStyled/index.style';
 
 const FormPage = (): React.ReactElement => {
+    document.documentElement.scrollTop = 0;
     const {
         handleSubmit,
         reset,
@@ -15,7 +16,7 @@ const FormPage = (): React.ReactElement => {
 
     const [dialogOpen, setDialogOpen] = useState(false);
 
-    const onSubmit = (data) => {
+    const onSubmit = () => {
         reset();
         setDialogOpen(true);
     };

@@ -5,6 +5,6 @@ export const Circular = styled(CircularProgress)`
     width: 100px;
     color: transparent;
     position: absolute;
-    border: 10px solid white;
+    border: 10px solid #f19502;
     animation-duration: 5s;
 `;
