@@ -7,16 +7,11 @@ import { HeaderStyled } from './index.style';
 
 const navigations: Array<{ name: string; href: string }> = [
     {
-        name: 'Главная',
+        name: 'Вопросы',
         href: getNavigationValue('sber_web.main')
     },
     {
-        name: 'Детальная информация',
-        href: getNavigationValue('sber_web.detail')
-    },
-
-    {
-        name: 'Редактировать',
+        name: 'Отправить вопрос',
         href: getNavigationValue('sber_web.edit')
     }
 ];
