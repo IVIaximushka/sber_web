@@ -6,6 +6,7 @@ import AnswerSlide from './AnswerSlide';
 import AnswerPicture from './AnswerPicture';
 import { getNavigationValue } from '@brojs/cli';
 import Loading from '../../components/Loading';
+import { validateText } from '../../services/validation/questions/questionTextValidation';
 
 const DetailPage = (): React.ReactElement => {
     const { id } = useParams();
@@ -18,7 +19,7 @@ const DetailPage = (): React.ReactElement => {
             ) : data ? (
                 <>
                     <h2>Вопрос</h2>
-                    <p>{data.question}</p>
+                    <p>{validateText(data.question)}</p>
                     <AnswerSlide answer={data.answer} comment={data.comments} author={data.authors} />
                 </>
             ) : (
