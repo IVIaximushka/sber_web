@@ -7,6 +7,7 @@ import AnswerPicture from './AnswerPicture';
 import { getNavigationValue } from '@brojs/cli';
 import Loading from '../../components/Loading';
 import { validateText } from '../../services/validation/questions/questionTextValidation';
+import { ButtonStyled } from '../../components/ButtonStyled/index.style';
 
 const DetailPage = (): React.ReactElement => {
     document.documentElement.scrollTop = 0;
@@ -32,6 +33,9 @@ const DetailPage = (): React.ReactElement => {
                     <AnswerPicture name={'druz-cto-gde-kogda'} />
                 </>
             )}
+            <ButtonStyled onClick={() => {window.history.back();}}>
+                Вернуться
+            </ButtonStyled>
         </DetailPageStyled>
     );
 };
