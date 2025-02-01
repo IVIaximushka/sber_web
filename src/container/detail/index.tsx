@@ -17,7 +17,7 @@ const DetailPage = (): React.ReactElement => {
                 <Loading />
             ) : data ? (
                 <>
-                    <h2>Страница детальных данных</h2>
+                    <h2>Вопрос</h2>
                     <p>{data.question}</p>
                     <AnswerSlide answer={data.answer} comment={data.comments} author={data.authors} />
                 </>
