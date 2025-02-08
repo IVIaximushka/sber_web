@@ -20,14 +20,10 @@ export const api = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: '' }),
     endpoints: (builder) => ({
         getList: builder.query<GetListResponse, number>({
-            queryFn: createQueryFromPromise((page: number) =>
-                listService.getList(page)
-            )
+            queryFn: createQueryFromPromise((page: number) => listService.getList(page))
         }),
         getQuestion: builder.query<Question, string>({
-            queryFn: createQueryFromPromise((id: string) =>
-                questionService.getQuestion(id)
-            )
+            queryFn: createQueryFromPromise((id: string) => questionService.getQuestion(id))
         })
     })
 });
