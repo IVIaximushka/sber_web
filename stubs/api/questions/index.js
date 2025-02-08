@@ -9,8 +9,7 @@ router.get('/:page', async (req, res) => {
     try {
         const data = await axios.get(baseUrl + `/questions?page=${page}&itemsPerPage=15`);
         res.send(data.data);
-    }
-    catch (e) {
+    } catch {
         res.send(undefined);
     }
 });
