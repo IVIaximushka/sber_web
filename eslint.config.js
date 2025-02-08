@@ -8,37 +8,37 @@ import hooksPlugin from 'eslint-plugin-react-hooks';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
-  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  {
-    settings: {
-      react: {
-        version: 'detect'
-      }
+    { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
+    { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
+    pluginJs.configs.recommended,
+    ...tseslint.configs.recommended,
+    {
+        settings: {
+            react: {
+                version: 'detect'
+            }
+        },
+        ...pluginReact.configs.flat.recommended
     },
-    ...pluginReact.configs.flat.recommended
-  },
-  jsxA11y.flatConfigs.recommended,
-  {
-    plugins: {
-      'react-hooks': hooksPlugin
+    jsxA11y.flatConfigs.recommended,
+    {
+        plugins: {
+            'react-hooks': hooksPlugin
+        },
+        rules: {
+            ...hooksPlugin.configs.recommended.rules,
+            'prettier/prettier': 'error',
+            'react/prop-types': 0
+        }
     },
-    rules: {
-      ...hooksPlugin.configs.recommended.rules,
-      "prettier/prettier": "error",
-      "react/prop-types": 0
+    pluginPrettier,
+    {
+        files: ['bro.config.js', 'stubs/api/**/*'],
+        rules: {
+            '@typescript-eslint/no-require-imports': 'off'
+        }
+    },
+    {
+        ignores: ['coverage/']
     }
-  },
-  pluginPrettier,
-  {
-    files: ['bro.config.js', 'stubs/api/**/*'],
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off'
-    }
-  },
-  {
-    ignores: ["coverage/"]
-  },
 ];

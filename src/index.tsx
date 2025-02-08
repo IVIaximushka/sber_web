@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 
 import App from './app';
 
+// fp не это не компонент
+// eslint-disable-next-line react/display-name
 export default () => <App />;
 
 let rootElement: ReactDOM.Root;
