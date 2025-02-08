@@ -7,7 +7,7 @@ const ContentPicture = () => {
             alt={'Фото вопроса'}
             width={310}
             height={200}
-            style={{borderRadius: '50%'}}
+            style={{ borderRadius: '50%' }}
         />
     );
 };
