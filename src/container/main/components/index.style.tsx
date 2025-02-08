@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { AppBar } from '@mui/material';
 
 export const LayoutStyled = styled.div`
     background-color: rgba(0, 0, 0, 0.54);

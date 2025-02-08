@@ -33,7 +33,11 @@ const DetailPage = (): React.ReactElement => {
                     <AnswerPicture name={'druz-cto-gde-kogda'} />
                 </>
             )}
-            <ButtonStyled onClick={() => {window.history.back();}}>
+            <ButtonStyled
+                onClick={() => {
+                    window.history.back();
+                }}
+            >
                 Вернуться
             </ButtonStyled>
         </DetailPageStyled>

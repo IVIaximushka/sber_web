@@ -14,17 +14,17 @@ const QuestionList = () => {
         <>
             {isLoading && <Loading />}
             {error && <div>Произошла ошибка</div>}
-            {data &&
+            {data && (
                 <QuestionListStyled columns={3} spacing={2}>
                     {data?.map((item) => (
-                        <LinkStyled to={getNavigationValue("sber_web.detail").replace(":id", item.id)}>
+                        <LinkStyled key={item.id} to={getNavigationValue('sber_web.detail').replace(':id', item.id)}>
                             <QuestionCard fullText={validateText(item.question)}>
                                 {truncateText(validateText(item.question))}
                             </QuestionCard>
                         </LinkStyled>
                     ))}
                 </QuestionListStyled>
-            }
+            )}
         </>
     );
 };

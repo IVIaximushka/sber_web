@@ -8,13 +8,11 @@ const CardContentHover = ({ fullText }): React.ReactElement => {
         <>
             <Grow in={true}>
                 <div>
-                    <ContentPicture/>
+                    <ContentPicture />
                 </div>
             </Grow>
-            <Fade in={true} timeout={1000} >
-                <div>
-                    {fullText}
-                </div>
+            <Fade in={true} timeout={1000}>
+                <div>{fullText}</div>
             </Fade>
         </>
     );
