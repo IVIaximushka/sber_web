@@ -31,5 +31,14 @@ export default [
       "react/prop-types": 0
     }
   },
-  pluginPrettier
+  pluginPrettier,
+  {
+    files: ['bro.config.js', 'stubs/api/**/*'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off'
+    }
+  },
+  {
+    ignores: ["coverage/"]
+  },
 ];
